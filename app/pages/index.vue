@@ -52,7 +52,7 @@ const quantidadeTotal = computed(() => carrinho.value.length)
   </div>
   <div class="relative border-2 border-red-100">
     <img src="/burrito.jpg" alt="burrito" class="h-96 w-full object-cover">
-    <div class="absolute inset-0 flex items-center justify-center font-sans text-4xl font-bold text-white md:text-6xl">
+    <div class="absolute inset-0 flex items-center justify-center font-sans text-5xl font-bold text-white md:text-6xl">
       FOOD SESSION
     </div>
   </div>
@@ -74,10 +74,10 @@ const quantidadeTotal = computed(() => carrinho.value.length)
             {{ descricao }}
           </p>
           <div class="flex flex-row items-center justify-between">
-            <button class="mt-5 w-28 rounded-md border border-blue-600 bg-blue-500 font-sans font-bold text-white transition-transform hover:scale-110 hover:bg-blue-800 active:scale-95 md:flex md:text-sm" @click="adicionarCarrinho(nome)">
+            <button class="mt-3 w-28 rounded-md border border-blue-600 bg-blue-500 font-sans font-bold text-white transition-transform hover:scale-110 hover:bg-blue-800 active:scale-95 md:mt-5 md:flex md:text-sm" @click="adicionarCarrinho(nome)">
               Adicionar ao carrinho
             </button>
-            <button class="mt-5 w-28 rounded-md border border-green-600 bg-green-500 font-sans font-bold text-white transition-transform hover:scale-110 hover:bg-green-800 active:scale-95 md:flex md:text-sm" @click="navigateTo(to)">
+            <button class="mt-3 w-28 rounded-md border border-green-600 bg-green-500 font-sans font-bold text-white transition-transform hover:scale-110 hover:bg-green-800 active:scale-95 md:mt-5 md:flex md:text-sm" @click="navigateTo(to)">
               Visualizar a comida
             </button>
           </div>
@@ -95,7 +95,7 @@ const quantidadeTotal = computed(() => carrinho.value.length)
 
     <template #body>
       <div v-for="{ nome, preco, img, id, quantidade} of compCarrinho" :key="id" class="flex items-center gap-4 border-b p-2 font-semibold text-gray-700">
-        <img :src="img" :alt="nome" class="size-16 cursor-pointer rounded-md object-cover shadow-2xl transition-transform duration-300 hover:scale-105">
+        <img :src="img" :alt="nome" class="size-16 cursor-pointer rounded-md border  border-red-500 object-cover shadow-2xl transition-transform duration-300 hover:scale-105">
         {{ nome }} - R$ {{ preco }} - Quantidade: ({{ quantidade }})
         <button class=" mt-5 w-32 rounded-md font-serif font-bold text-white md:flex md:text-sm" @click="removerComida(id)">
           <Icon name="i-lucide-trash" class=" mt-2 size-5 cursor-pointer bg-red-600 transition-transform hover:scale-150" />
@@ -104,9 +104,11 @@ const quantidadeTotal = computed(() => carrinho.value.length)
     </template>
 
     <template #footer>
-      <button class="ml-5 mt-5 max-w-44 rounded-md border border-red-600 bg-red-500 px-2 py-3 font-sans font-bold text-white transition-transform hover:scale-110 hover:bg-red-800 active:scale-95 md:flex md:text-sm" @click="limparCarrinho()">
-        Limpar todo carrinho
-      </button>
+      <div class="flex items-center justify-center">
+        <button class=" ml-5 mt-5 max-w-44 rounded-md border border-red-600 bg-red-500 px-2 py-3 font-sans font-bold text-white transition-transform hover:scale-110 hover:bg-red-800 active:scale-95 md:flex md:text-sm" @click="limparCarrinho()">
+          Limpar todo carrinho
+        </button>
+      </div>
       <p class="pt-10 text-center font-sans font-bold text-red-600 md:text-2xl">
         Agradecemos a sua compra!
       </p>

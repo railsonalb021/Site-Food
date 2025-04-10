@@ -12,7 +12,7 @@ const modal = defineModel<boolean>({
         <slot name="body" />
         <slot name="footer" />
         <button class="absolute right-3 top-3 cursor-pointer text-red-600 hover:text-gray-800" @click="modal = false">
-          <Icon name="line-md:close" class="text-4xl" />
+          <Icon name="line-md:close-circle" class="text-4xl" />
         </button>
       </div>
     </div>
