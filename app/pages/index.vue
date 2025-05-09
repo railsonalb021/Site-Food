@@ -52,8 +52,8 @@ const quantidadeTotal = computed(() => carrinho.value.length)
   </div>
   <div class="relative border-2 border-red-100">
     <img src="/pizzalogo.jpg" alt="burrito" class="h-96 w-full object-cover">
-    <div class="absolute inset-0 flex items-center justify-center font-sans text-5xl font-bold text-white md:text-6xl">
-      FOOD SESSION
+    <div class="absolute inset-0 flex items-center justify-center font-sans text-4xl font-bold text-white md:text-6xl">
+      RAILSON'S FOOD
     </div>
   </div>
 
