@@ -14,6 +14,7 @@ if(!comidaAtual){
 
 <template>
   <div>
+    <Icon name="i-lucide-arrow-left" class="absolute left-3 top-5 size-12 cursor-pointer text-white hover:scale-110 active:scale-95" @click="$router.back()" />
     <h1 class="border-2 border-red-200 bg-red-600 p-5 text-center font-sans text-4xl font-bold text-white">
       Comidas
     </h1>
